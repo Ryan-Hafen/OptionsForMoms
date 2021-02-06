@@ -1,15 +1,13 @@
 <div class="d-flex">
   <ul ngbNav #nav="ngbNav" [(activeId)]="active" class="nav-pills" orientation="vertical">
-    <li ngbNavItem="top">
-      <a ngbNavLink>Sales Volume</a>
+    <li ngbNavItem="sales">
+      <a ngbNavLink routerLink='/sales'>Sales Volume</a>
     </li>
-    <li ngbNavItem="middle">
-      <a ngbNavLink>Latest Orders</a>
+    <li ngbNavItem="orders">
+      <a ngbNavLink routerLink='/orders'>Latest Orders</a>
     </li>
-    <li ngbNavItem="bottom">
-      <a ngbNavLink>System Health</a>
+    <li ngbNavItem="health">
+      <a ngbNavLink routerLink='/health'>System Health</a>
     </li>
   </ul>
-
-  <div [ngbNavOutlet]="nav" class="ml-4"></div>
 </div>
