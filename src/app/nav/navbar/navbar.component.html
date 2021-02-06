@@ -1,3 +1,22 @@
-<p>
-  navbar works!
-</p>
+<a class="navbar-brand" href="#">
+  <span class="logo logo-left">ng</span>
+  <span class="logo logo-right">Sight</span>
+</a>
+<ul ngbNav #nav="ngbNav" [activeId]="2" class="nav-tabs justify-content-center">
+  <li [ngbNavItem]="1">
+    <a ngbNavLink>Simple</a>
+  </li>
+  <li [ngbNavItem]="2">
+    <a ngbNavLink><b>Fancy</b> title</a>
+  </li>
+  <li ngbDropdown class="nav-item">
+    <a href (click)="false" class="nav-link" ngbDropdownToggle>Dropdown</a>
+    <div ngbDropdownMenu>
+      <button ngbDropdownItem>Action</button>
+      <button ngbDropdownItem>Another action</button>
+      <button ngbDropdownItem>Something else here</button>
+      <div class="dropdown-divider"></div>
+      <button ngbDropdownItem>Separated link</button>
+    </div>
+  </li>
+</ul>

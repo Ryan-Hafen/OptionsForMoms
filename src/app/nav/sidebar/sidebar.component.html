@@ -1,3 +1,15 @@
-<p>
-  sidebar works!
-</p>
+<div class="d-flex">
+  <ul ngbNav #nav="ngbNav" [(activeId)]="active" class="nav-pills" orientation="vertical">
+    <li ngbNavItem="top">
+      <a ngbNavLink>Sales Volume</a>
+    </li>
+    <li ngbNavItem="middle">
+      <a ngbNavLink>Latest Orders</a>
+    </li>
+    <li ngbNavItem="bottom">
+      <a ngbNavLink>System Health</a>
+    </li>
+  </ul>
+
+  <div [ngbNavOutlet]="nav" class="ml-4"></div>
+</div>
